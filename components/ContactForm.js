@@ -6,10 +6,20 @@ var ContactForm = React.createClass({
   render: function () {
     return (
       <form className={'contactForm'}>
-        <input className={'input-name'} type={'text'} placeholder={'Imię'} value={this.props.contact.Name} />
-        <input className={'input-lastName'} type={'text'} placeholder={'lastName'} value={this.props.contact.lastName} />}
-        <input className={'input-email'} type={'email'} placeholder={'Email'} value={this.props.contact.email} />
-        <button type={'submit'}>Dodaj kontakt</button>
+        <div className={'form-group'}>
+        
+          <input className={'form-control'} type={'text'} placeholder={'Imię'} value={this.props.contact.Name} />
+        </div>
+        <div class="form-group">
+          <input className={'form-control'} type={'text'} placeholder={'lastName'} value={this.props.contact.lastName} />
+        </div>
+        <div class="form-group">
+        
+          <input className={'form-control'} type={'email'} placeholder={'Email'} value={this.props.contact.email} />
+        </div>
+        <p>
+          <button className={'btn btn-success'} type={'submit'}>Dodaj kontakt</button>
+        </p>
       </form>
     )
   },
